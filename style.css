@@ -9,6 +9,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .container {
     width: 100%;
     max-width: 400px;
@@ -29,11 +40,213 @@ body {
 .login-box h2, .menu-box h2 {
     margin: 0 0 30px;
     padding: 0;
-    color: #ff0059;
+    color: #d24eb5;
 }
 
 .user-box {
-    position: relative;
+    position: relative;body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(120deg, #ffcccb, #ffd700);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .login-box, .menu-box {
+        position: relative;
+        max-width: 400px;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        color: #5a5a5a;  /* Updated text color */
+    }
+    
+    .login-box h2, .menu-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #ffd700;
+    }
+    
+    .user-box {
+        position: relative;
+    }
+    
+    .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #ffd700;
+        outline: none;
+        color: #5a5a5a;  /* Updated text color */
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    
+    .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        pointer-events: none;
+        font-size: 18px;
+        color: #5a5a5a;  /* Updated text color */
+        transition: 0.5s;
+    }
+    
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #ffcccb;
+        font-size: 12px;
+    }
+    
+    button {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #cf26c4;
+        font-size: 16px;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background: #cf26c4;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ffd700, 0 0 25px #ffd700, 0 0 50px #ffd700, 0 0 100px #ffd700;
+    }
+    
+    button span {
+        position: absolute;
+        display: block;
+    }
+    
+    button span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ffd700);
+        animation: btn-anim1 1s linear infinite;
+    }
+    
+    @keyframes btn-anim1 {
+        0% {
+            left: -100%;
+        }
+        50%, 100% {
+            left: 100%;
+        }
+    }
+    
+    button span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #ffd700);
+        animation: btn-anim2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    
+    @keyframes btn-anim2 {
+        0% {
+            top: -100%;
+        }
+        50%, 100% {
+            top: 100%;
+        }
+    }
+    
+    button span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #ffd700);
+        animation: btn-anim3 1s linear infinite;
+        animation-delay: 0.5s;
+    }
+    
+    @keyframes btn-anim3 {
+        0% {
+            right: -100%;
+        }
+        50%, 100% {
+            right: 100%;
+        }
+    }
+    
+    button span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #ffd700);
+        animation: btn-anim4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    
+    @keyframes btn-anim4 {
+        0% {
+            bottom: -100%;
+        }
+        50%, 100% {
+            bottom: 100%;
+        }
+    }
+    
+    .menu-option {
+        margin-top: 20px;
+        color: #5a5a5a;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    
+    .menu-option:hover {
+        color: #ffcccb;
+    }
+    
+    @media (max-width: 430px) {
+        .container {
+            width: 90%;
+        }
+    
+        .login-box, .menu-box {
+            padding: 20px;
+        }
+    
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    
+        .menu-option {
+            font-size: 16px;
+        }
+    }
+    
 }
 
 .user-box input {
@@ -71,7 +284,7 @@ button {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #ff0059;
+    color: #d24eb5;
     font-size: 16px;
     text-transform: uppercase;
     overflow: hidden;
