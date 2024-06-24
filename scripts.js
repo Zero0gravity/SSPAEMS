@@ -31,9 +31,47 @@ function showProductionOptions() {
         <div class="container">
             <div class="menu-box">
                 <h2>Production</h2>
-                <div class="menu-option">Day Shift</div>
-                <div class="menu-option">Night Shift</div>
+                <div class="menu-option" onclick="showDayShift()">Day Shift</div>
+                <div class="menu-option" onclick="showNightShift()">Night Shift</div>
                 <div class="menu-option" onclick="showMenu()">Back</div>
+            </div>
+        </div>
+    `;
+}
+
+function showDayShift() {
+    document.body.innerHTML = `
+        <div class="container">
+            <div class="menu-box">
+                <h2>Day Shift</h2>
+                <div class="product-item">1. One litreLitre round Shrink</div>
+                <div class="product-item">2. One litre Round Box</div>
+                <div class="product-item">3. One Litre Square shrink</div>
+                <div class="product-item">4. One Litre square Box</div>
+                <div class="product-item">5. Half Litreyellow</div>
+                <div class="product-item">6. Half Litre Pink</div>
+                <div class="product-item">7. 200ml pink</div>
+                <div class="product-item">8. Customizable </div>
+                <div class="menu-option" onclick="showProductionOptions()">Back</div>
+            </div>
+        </div>
+    `;
+}
+
+function showNightShift() {
+    document.body.innerHTML = `
+        <div class="container">
+            <div class="menu-box">
+                <h2>Night Shift</h2>
+                <div class="product-item">1. One Litre round Shrink</div>
+                <div class="product-item">2. One Litre Round Box</div>
+                <div class="product-item">3. One Litre Square shrink</div>
+                <div class="product-item">4. One Litre square Box</div>
+                <div class="product-item">5. Half Litre yellow</div>
+                <div class="product-item">6. Half Litre Pink</div>
+                <div class="product-item">7. 200ml pink</div>
+                <div class="product-item">8. Customizable</div>
+                <div class="menu-option" onclick="showProductionOptions()">Back</div>
             </div>
         </div>
     `;
